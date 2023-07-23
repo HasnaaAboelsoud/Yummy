@@ -1,0 +1,184 @@
+:root{
+    --main-color: #f9f6f6;
+    --bg-color: #0D0D0D;
+}
+body{
+    font-family:  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: var(--bg-color);
+    color: var(--main-color); 
+    overflow: hidden;
+}
+/* start sidebar */
+#sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar-inner{
+    background-color: var(--bg-color);
+    padding: 22px;
+    width: 260px;
+}
+#sidebar li{
+    position: relative;
+    top: 200px;
+}
+#sidebar .sidebar-inner a{
+    color: var(--main-color);
+}
+.sidebar-icon{
+    background-color: var(--main-color);
+    padding: 10px;
+}
+#sidebar i{
+    cursor: pointer;
+}
+.sidebar-icon img{
+    width: 45px;
+}
+.sidebar-icon .icon, 
+.sidebar-icon .icon2{
+    color: var(--bg-color);
+}
+/* .sidebar-icon  */
+.icon i{
+    font-size: 40px;
+}
+/* end sidebar */
+/* start search */
+input{
+    color: var(--main-color) !important;
+}
+::placeholder{
+    color: #aaa !important; 
+}
+/* end search */
+.layout{
+    background-color: rgb(249, 246, 246,.8);
+    top: 170%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: top .5s;
+    color: var(--bg-color);
+}
+.content:hover .layout{
+    top: 0;
+}
+.col-md-3 .content,
+.col-md-3.area{
+    cursor: pointer;
+}
+/* start details */
+.meals ul li{
+    color: #055160;
+    background-color: #cff4fc;
+}
+.meals ul .text{
+    color: #842029;
+    background-color: #f8d7da;
+}
+/* end details */
+/* contact */
+.contact .submitBtn{
+    width: fit-content;
+}
+.contact .submitBtn:hover{
+    color: white !important;
+}
+.contact .error{
+    color: #842029;
+    background-color: #f8d7da;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+/*start loading */
+.loading,
+.loading2{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    overflow: hidden;
+    z-index: 99;
+}
+.loading2{
+    z-index: 7;
+    display: none;
+}
+.loader{
+    color: #fff;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em,
+            2em -2em 0 0em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em,
+            3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 -1em;
+    }
+
+    25% {
+        box-shadow: 0 -3em 0 -0.5em,
+            2em -2em 0 0, 3em 0 0 0.2em,
+            2em 2em 0 0, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 -1em;
+    }
+
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em,
+            -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em,
+            -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0,
+            -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+/*end loading */
